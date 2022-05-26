@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @charset "utf-8";
+
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 400;
+            src: local(Montserrat-Light), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-Light.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-Light.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            src: local(Montserrat), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-Regular.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-Regular.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 700;
+            src: local(Montserrat-SemiBold), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/Montserrat-SemiBold.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: NotoSansCJKkr;
+            font-style: normal;
+            font-weight: 400;
+            src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: NotoSansCJKkr;
+            font-style: normal;
+            font-weight: 500;
+            src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: NotoSansCJKkr;
+            font-style: normal;
+            font-weight: 700;
+            src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff") format("woff")
+        }
+
+        @font-face {
+            font-family: Dovemayo-Medium;
+            src: url("https://www.oliveyoung.co.kr/pc-static-root/fonts/dovemayo/Dovemayo-Medium.woff") format('woff');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        #header {
+            width: 1020px;
+            margin: 0 auto
+        }
+
+        #header .top {
+            top: 0;
+            right: 0;
+            position: relative;
+            height: 30px;
+        }
+
+        #header .top .menu_list {
+            margin: 0 auto;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #header .top .menu_list>li {
+            font-size: 12px;
+            float: left;
+            padding: 0 9px 0 10px;
+            line-height: 30px;
+            white-space: nowrap;
+            border: 1px;
+            border-left: black;
+        }
+
+        .search_box {
+            float: left;
+            position: relative;
+            width: 340px;
+            height: 40px;
+            margin: 22px 0 0 90px;
+            padding: 0 45px 0 20px;
+            border: 2px solid #9bce26;
+            background: rgb(255, 255, 255);
+            border-radius: 20px
+        }
+
+        .search_box input[type=text] {
+            width: 330px;
+            height: 24px;
+            border: 0;
+            padding: 8px 10px 8px 0;
+            font-size: 16px
+        }
+
+        li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        nav {
+            border: 1px black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top">
+            <ul class="menu_list">
+                <li><a href="회원가입 링크">회원 가입</a></li>
+                <li><a href="로그인 링크">로그인</a></li>
+                <li><a href="장바구니 링크">장바구니</a></li>
+                <li><a href="주문배송 링크">주문배송</a></li>
+                <li><a href="고객센터 링크">고객센터</a></li>
+                <li><a href="주문배송 링크">매장안내</a></li>
+                <li><a href="주문배송 링크">Global</a></li>
+            </ul>
+        </div>
+        <a href="올리브영">
+            <img src="oliveyoung.png" alt="올리브영" width="248px" height="42"></a>
+        <fieldset style="border: none;">
+            <div class="search_box">
+                <input type="text">
+                <button type="submit"><img src="searchbutton.png" width=""></button>
+            </div>
+            <ul>
+                <li><a href="오늘 드림">오늘 드림</a></li>
+                <li><a href="관심 매장소식">관심 매장소식</a></li>
+                <li><a href="최근 본 상품">최근 본 상품</a></li>
+            </ul>
+        </fieldset>
+        <nav>
+            <div>카테고리</div>
+            <div>
+
+                <ul>
+                    <li><a href="오특"></a>오특</li>
+                    <li><a href="신상"></a>신상</li>
+                    <li><a href="랭킹"></a>랭킹</li>
+                    <li><a href="프리미엄관"></a>프리미엄관</li>
+                    <li><a href="기획전"></a>기획전</li>
+                    <li><a href="세일"></a>세일</li>
+                    <li><a href="기프트카드"></a>기프트카드</li>
+                    <li><a href="멤버십"></a>멤버십/쿠폰</li>
+                    <li><a href="이벤트"></a>이벤트</li>
+                </ul>
+            </div>
+        </nav>
+</body>
+
+</html>
