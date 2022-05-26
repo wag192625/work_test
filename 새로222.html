@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
+
+    @charset "utf-8";
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 400;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 500;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 700;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: Dovemayo-Medium;
+      src: url("https://www.oliveyoung.co.kr/pc-static-root/fonts/dovemayo/Dovemayo-Medium.woff") format('woff');
+      font-weight: 400;
+      font-style: normal
+    }
+
+    body {
+      margin: 0;
+      font-family: Montserrat, -apple-system, 'Noto Sans KR', AppleSDGothicNeo, Roboto, dotum, '돋움', sans-serif;
+    }
+
+    input {
+      outline: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    #header {
+      width: 1020px;
+      margin: 0 auto
+    }
+
+    #header .top {
+      top: 0;
+      right: 0;
+      position: relative;
+      height: 30px;
+    }
+
+    #header .top .menu_list {
+      margin: 0 auto;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    #header .top .menu_list a {
+      padding: 0 9px 0 8px;
+      line-height: 30px;
+      white-space: nowrap;
+      border-left: 1px solid #b6b6b6;
+      font-size: 12px;
+    }
+
+    #header .top .menu_list li:first-child a {
+      border-left: none;
+    }
+
+    .search_box {
+      position: relative;
+      width: 271px;
+      height: 36px;
+      padding: 0 45px 0 20px;
+      border: 2px solid #9bce26;
+      background: rgb(255, 255, 255);
+      border-radius: 20px
+    }
+
+    .search_box input[type=text] {
+      width: 220px;
+      height: 18px;
+      border: 0;
+      padding: 8px 10px 8px 0;
+      font-size: 12px;
+    }
+
+    ul,
+    li {
+      list-style-type: none;
+      margin: 0px;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      line-height: 30px;
+    }
+
+    /* nav영역 */
+    nav {
+      display: flex;
+      width: 100vw;
+      margin-left: calc((100vw - 1020px) / 2 * -1);
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    nav>div {
+      display: flex;
+      width: 1020px;
+      margin: 0 auto;
+    }
+
+    .category {
+      position: relative;
+      width: 170px;
+      padding: 10px;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      font-size: 16px;
+    }
+    
+    .category_list {
+      display: none;
+    }
+    
+    .category.test .category_list{
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 1020px;
+      background-color: gray;
+    }
+
+    /* . {
+            position: absolute;
+            top: 44px;
+            width: 1020px;
+            border: 2px solid #2f3030;
+            background: #fff;
+            z-index: 20;
+            display: none
+        } */
+    fieldset {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .search_box__btn {
+      position: absolute;
+      top: 7px;
+      right: 13px;
+      border: none;
+      background-color: transparent;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    .today {
+      position: relative;
+    }
+
+    .today:hover {
+      border-bottom: 1px solid #000;
+    }
+
+    .today_hover_show {
+      display: none;
+    }
+
+    .today:hover .today_hover_show {
+      position: absolute;
+      top: 40px;
+      display: block;
+      width: 210px;
+      padding: 12px 15px 12px 15px;
+      background: #fff;
+      box-shadow: 2px 0 7px 2px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="top">
+      <ul class="menu_list">
+        <li><a href="회원가입 링크">회원가입</a></li>
+        <li><a href="로그인 링크">로그인</a></li>
+        <li><a href="장바구니 링크">장바구니</a></li>
+        <li><a href="주문배송 링크">주문배송</a></li>
+        <li><a href="고객센터 링크">고객센터</a></li>
+        <li><a href="주문배송 링크">매장안내</a></li>
+        <li><a href="주문배송 링크">Global</a></li>
+      </ul>
+    </div>
+    <div>
+      <fieldset>
+        <div>
+          <a href="올리브영">
+            <img src="oliveyoung.png" alt="올리브영" width="248px" height="42">
+          </a>
+        </div>
+        <div class="search_box">
+          <input type="text">
+          <button type="submit" class="search_box__btn">
+            <img src="searchbutton.png" width="">
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="today">
+              <a href="오늘 드림">오늘 드림</a>
+              <div class="today_hover_show">
+                배송지를 등록하고~~~
+              </div>
+            </li>
+            <li><a href="관심 매장소식">관심 매장소식</a></li>
+            <li><a href="최근 본 상품">최근 본 상품</a></li>
+          </ul>
+        </div>
+      </fieldset>
+    </div>
+    <nav>
+      <div>
+        <div class="category">
+          <p>카테고리</p>
+          <ul class="category_list">
+            <li>
+              <h2>뷰티</h2>
+              <div>
+                <p>스킨케어</p>
+                <ul>
+                  <li>스킨/로션/올인원</li>
+                  <li>에센스/크림</li>
+                  <li>미스트/오일</li>
+                </ul>
+                <p>마스크팩</p>
+                <ul>
+                  <li>시트팩/패드</li>
+                  <li>페이셜팩</li>
+                  <li>코팩/패치</li>
+                </ul>
+                <p>클렌징폼/젤</p>
+                <ul>
+                  <li>스킨/로션/올인원</li>
+                  <li>오일/워터/리무버</li>
+                  <li>필링/패드</li>
+                </ul>
+                <p>선케어</p>
+                <ul>
+                  <li>선블록</li>
+                  <li>태닝/에프터선</li>
+                </ul>
+              </div>
+              <div>
+                <p>더모코스메틱</p>
+                <ul>
+                  <li>스킨/로션</li>
+                  <li>에센스/크림</li>
+                  <li>미스트/오일</li>
+                  <li>마스크팩</li>
+                  <li>클렌징</li>
+                  <li>선케어</li>
+                  <li>바디케어</li>
+                </ul>
+                <p>메이크업</p>
+                <ul>
+                  <li>립메이크업</li>
+                  <li>베이스메이크업</li>
+                  <li>아이메이크업</li>
+                </ul>
+                <p>네일</p>
+                <ul>
+                  <li>폴리쉬</li>
+                  <li>팁/스티커</li>
+                  <li>반경화</li>
+                  <li>케어</li>
+                </ul>
+                <p>바디케어</p>
+                <ul>
+                  <li>워시/스크럽</li>
+                  <li>로션/오일</li>
+                  <li>제모용품</li>
+                  <li>핸드케어</li>
+                  <li>립케어</li>
+                  <li>바디미스트</li>
+                  <li>데오도란트</li>
+                  <li>풋케어</li>
+                  <li>선물세트</li>
+                </ul>
+              </div>
+              <div>
+                <p>헤어케어</p>
+                <ul>
+                  <li>샴푸/린스</li>
+                  <li>트리트먼트/팩</li>
+                  <li>헤어기기</li>
+                  <li>헤어브러쉬</li>
+                  <li>염색약/펌</li>
+                  <li>스타일링</li>
+                  <li>탈모케어</li>
+                  <li>에센스</li>
+                </ul>
+                <p>향수/디퓨저</p>
+                <ul>
+                  <li>여성향수</li>
+                  <li>남성향수</li>
+                  <li>캔들/디퓨저</li>
+                </ul>
+                <p>미용소품</p>
+                <ul>
+                  <li>페이스</li>
+                  <li>아이</li>
+                  <li>헤어/바디</li>
+                  <li>코튼</li>
+                  <li>디바이스</li>
+                  <li>네일</li>
+                  <li>기타소품</li>
+                  <p>남성</p>
+                  <ul>
+                    <li>스킨케어</li>
+                    <li>바디케어</li>
+                    <li>헤어케어</li>
+                    <li>메수크업</li>
+                    <li>쉐수빙</li>
+                    <li>향수</li>
+                    <li>매너용품</li>
+                    <li>건강식품</li>
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <h2>헬스&푸드</h2>
+              <div>
+                <p>건강/위생식품</p>
+                <ul>
+                  <li>덴탈케어</li>
+                  <li>스팟패치/마스크</li>
+                  <li>여성/위생용품</li>
+                  <li>아이케어</li>
+                  <li>운동/헬스/재활용품</li>
+                  <li>물티슈/손소독티슈</li>
+                  <li>마사지/찜질용품</li>
+                  <li>성인용품</li>
+                  <li>홈케어/의료용품</li>
+                </ul>
+                <p>건강식품</p>
+                <ul>
+                  <li>비타민류</li>
+                  <li>장 건강</li>
+                  <li>체중 관리</li>
+                  <li>이너뷰티 케어</li>
+                  <li>여성 건강</li>
+                  <li>혈행/눈/간 건강</li>
+                  <li>홍삼/면역케어</li>
+                  <li>관절/뼈/치아 건강</li>
+                  <li>기타(스페셜케어)</li>
+                  <li>선물용 건강세트</li>
+                </ul>
+                <p>푸드</p>
+                <ul>
+                  <li>식단/이너뷰티</li>
+                  <li>간편식/요리</li>
+                  <li>디저트/간식</li>
+                  <li>생수/음료</li>
+                  <li>베이비푸트</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>라이프</h2>
+                <p>라이프/홈</p>
+                <ul>
+                  <li>공간방향/제습</li>
+                  <li>홈클리닝</li>
+                  <li>생활</li>
+                  <li>주방</li>
+                  <li>라이프웨어</li>
+                  <li>테크</li>
+                  <li>홈데코</li>
+                  <li>악세서리</li>
+                  <li>굿즈</li>
+                </ul>
+                <p>반려동물</p>
+                <ul>
+                  <li>강아지 식품</li>
+                  <li>강아지 용품</li>
+                  <li>고양이 식품</li>
+                  <li>고양이 용품</li>
+                </ul>
+                <p>베이비</p>
+                <ul>
+                  <li>기저귀</li>
+                  <li>분유/이유식/간식</li>
+                  <li>스킨/바디케어</li>
+                  <li>유아용품</li>
+                  <li>베이비 물티슈</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="category2">
+          <ul>
+            <li><a href="오특">오특</a></li>
+            <li><a href="신상">신상</a></li>
+            <li><a href="랭킹">랭킹</a></li>
+            <li><a href="프리미엄관">프리미엄관</a></li>
+            <li><a href="기획전">기획전</a></li>
+            <li><a href="세일">세일</a></li>
+            <li><a href="기프트카드">기프트카드</a></li>
+            <li><a href="멤버십">멤버십/쿠폰</a></li>
+            <li><a href="이벤트">이벤트</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</body>
+
+<script>
+  const category = document.querySelector(".category");
+  
+  category.addEventListener("click", () => {
+    if (category.classList.contains("test")) {
+      category.classList.remove("test");
+    } else {
+      category.classList.add("test");
+    }
+  })
+</script>
+
+</html>
