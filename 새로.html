@@ -116,6 +116,27 @@
       background: rgb(255, 255, 255);
       border-radius: 20px
     }
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+    .search_box:hover {
+      border: 2px solid #9bce26;
+    }
+    .search_box_hover_show{
+      display: block;
+    }
+    .search_box:hover .search_box_hover_show{
+      position: absolute;
+      top: 40px;
+      display: block;
+      width: 210px;
+      padding: 12px 15px 12px 15px;
+      background: #fff;
+      box-shadow: 2px 0 7px 2px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
 
     .search_box input[type=text] {
       width: 260px;
@@ -142,12 +163,12 @@
     ul {
       display: flex;
     }
-
+/* ---------------------------------------- */
     .right li{
       display: flex;
       position: relative;
       font-size: 14px;
-      border-left: 1px solid rgb(141, 141, 141);
+      border-left: 1px solid rgb(140, 140, 140);
       padding: 3px 12px 3px 12px;  
     }
     .right :first-child {
@@ -165,6 +186,7 @@
     .today_hover_show {
       display: none;
     }
+
     .today:hover .today_hover_show {
       position: absolute;
       display: block;
@@ -215,7 +237,8 @@
       top: -10px;
       left: 40px;
     }
-
+    
+/* -------------------------------------------------- */
 
 
 
@@ -240,13 +263,17 @@
       position: relative;
       width: 170px;
       padding: 10px;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
     }
     .category_list{
       display: none;
     }
-    .category2 {
+    .category2 li {
+      display: flex;
       position: relative;
-      width: 1020px;
+      align-items: center;
+      justify-items: space-between;
     }
 
   </style>
@@ -278,6 +305,7 @@
           <img src="searchbutton.png">
         </button>
       </div>
+
       <div class="right">
         <ul>
           <li class="today">
@@ -296,6 +324,7 @@
               <div class="show3"></div>
         </ul>
       </div>
+
     </fieldset>
   </div>
   <nav>
@@ -481,15 +510,15 @@
       </div>
       <div class="category2">
           <ul>
-            <li><a href="오특"></a>오특</li>
-            <li><a href="신상"></a>신상</li>
-            <li><a href="랭킹"></a>랭킹</li>
+            <li><a href="오특">오특</a></li>
+            <li><a href="신상">신상</a></li>
+            <li><a href="랭킹">랭킹</a></li>
             <li><a href="프리미엄관"></a>프리미엄관</li>
-            <li><a href="기획전"></a>기획전</li>
-            <li><a href="세일"></a>세일</li>
-            <li><a href="기프트카드"></a>기프트카드</li>
-            <li><a href="멤버십"></a>멤버십/쿠폰</li>
-            <li><a href="이벤트"></a>이벤트</li>
+            <li><a href="기획전">기획전</a></li>
+            <li><a href="세일">세일</a></li>
+            <li><a href="기프트카드">기프트카드</a></li>
+            <li><a href="멤버십">멤버십/쿠폰</a></li>
+            <li><a href="이벤트">이벤트</a></li>
           </ul>
         </div>
       </div>
