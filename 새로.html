@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -130,39 +129,13 @@
       background: rgb(255, 255, 255);
       border-radius: 20px
     }
-
-
-    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-    .search_box:hover {
-      border: 2px solid #9bce26;
-    }
-
-    .search_box_hover_show {
-      display: block;
-    }
-
-    .search_box:hover .search_box_hover_show {
-      position: absolute;
-      top: 40px;
-      display: block;
-      width: 210px;
-      padding: 12px 15px 12px 15px;
-      background: #fff;
-      box-shadow: 2px 0 7px 2px rgb(0 0 0 / 20%);
-      border-radius: 5px;
-      font-size: 12px;
-    }
-
-    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
     .search_box input[type=text] {
       width: 260px;
       height: 18px;
       border: 0;
-      padding: 8px 10px 8px 0;
+      /* padding: 8px 10px 8px 0; */
       font-size: 12px
     }
-
     .search_box_btn {
       position: absolute;
       /* 절대좌표로 이동 */
@@ -173,19 +146,42 @@
       background-color: transparent;
       /* 버튼 기본색 투명화 */
     }
+    .search_box_list {
+      display: none;
+    }
+    .search_box.test .search_box_list {
+      display: flex;
+      position: absolute;
+      width: 332px;
+      top: -2px;
+      left: -2px;
+      height: 360px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid #9bce26;
+      margin: 0;
+      text-indent: 3px;
+      border-radius: 20px;
+      z-index: 20px;
+    
+    }
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+
+
 
     li {
       text-decoration: none;
       list-style-type: none;
     }
-
     /* display: inline; ul 스타일에 적용*/
-
     ul {
       display: flex;
     }
 
-    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
     .right li {
       display: flex;
       position: relative;
@@ -205,11 +201,13 @@
       position: relative;
     }
 
+
     .show1:hover,
     .show2:hover,
     .show3:hover {
-      border-bottom: 1px solid black;
+      border-bottom: 2px solid black;
     }
+
 
     .show1_hover_show {
       display: none;
@@ -249,7 +247,7 @@
       position: absolute;
       display: block;
       width: 553px;
-      height: 75px;
+      height: 150px;
       padding-bottom: 20px;
       background-color: white;
       box-shadow: 2px 0 7px 2px (rgb(0 0 0) / 20%);
@@ -275,11 +273,14 @@
       top: -10px;
       right: 40px;
     }
-
     .show2_page {
-      width: 100%;
-      height: 100%;
+      display: block;
       border: none;
+      justify-content: center;
+    }
+    .show2_page ul{
+      justify-content: space-between;
+      flex-direction: column;
     }
 
     .show2_btn {
@@ -291,6 +292,25 @@
 
     }
 
+    .show3_list {
+      display: none;
+    }
+
+    .show3.test .show3_list{
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      width: 1020px;
+      top: 45px;
+      right: 0px;
+      height: 360px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid #9bce26;
+      margin: 0;
+      text-indent: 3px;
+      border-radius: 20px;
+      z-index: 10px;
+    }
     /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
     /* nav 영역 */
     nav {
@@ -315,6 +335,7 @@
     .category {
       position: relative;
       width: 170px;
+      font-weight: 600;
       padding: 10px;
       border-right: 1px solid #ddd;
       border-left: 1px solid #ddd;
@@ -322,7 +343,6 @@
 
     .category_list {
       display: none;
-      padding: 200px solid black;
     }
 
     .category_list>li h2 {
@@ -389,6 +409,7 @@
 
     .category2 {
       width: 100%;
+      font-weight: 600;
       align-content: center;
     }
 
@@ -399,6 +420,11 @@
       align-items: center;
       justify-content: space-evenly;
     }
+    .category2 li:hover {
+      color: rgb(254, 53, 86);
+      border-bottom: 2px solid rgb(254, 53, 86);
+    }
+
   </style>
 </head>
 <body>
@@ -423,7 +449,7 @@
           </a>
         </div>
         <div class="search_box">
-          <input type="text">
+          <input type="text" class="search_box_list">
           <button type="submit" class="search_box_btn">
             <img src="searchbutton.png">
           </button>
@@ -454,8 +480,11 @@
               </div>
             </li>
             <li class="show3">
-              <a href="">최근 본 상품</a>
-              <div class="show3"></div>
+              <a>최근 본 상품</a>
+              <div class="show3_list"><ul>
+                <li>전체</li>
+                <li>최근 본 상품</li>
+              </div>
             </li>
           </ul>
         </div>
@@ -674,6 +703,24 @@
     }
   })
 
+  const search_box = document.querySelector(".search_box");
+  search_box.addEventListener("click", () => {
+    if (search_box.classList.contains("test")) {
+      search_box.classList.remove("test");
+    } else {
+      search_box.classList.add("test");
+    }
+  })
+
+  const show3 = document.querySelector(".show3");
+  show3.addEventListener("click", () => {
+    if (show3.classList.contains("test")) {
+      show3.classList.remove("test");
+    } else {
+      show3.classList.add("test");
+    }
+  })
+  
 </script>
 
 </html>
