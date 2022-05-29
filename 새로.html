@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -732,4 +733,738 @@
   
 </script>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    @charset "utf-8";
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 400;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Regular.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 500;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Medium.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: NotoSansCJKkr;
+      font-style: normal;
+      font-weight: 700;
+      src: local(NotoSansCJKkr), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff2") format("woff2"), url("https://www.oliveyoung.co.kr/pc-static-root/fonts/NotoSansCJKkr-Bold.woff") format("woff")
+    }
+
+    @font-face {
+      font-family: Dovemayo-Medium;
+      src: url("https://www.oliveyoung.co.kr/pc-static-root/fonts/dovemayo/Dovemayo-Medium.woff") format('woff');
+      font-weight: 400;
+      font-style: normal
+    }
+
+
+    body {
+      margin: 0;
+      /* 바디 자체 마진값 삭제*/
+      font-family: Montserrat, -apple-system, 'Noto Sans KR',
+        AppleSDGothicNeo, Roboto, dotum, '돋움', sans-serif;
+    }
+
+    input {
+      outline: none;
+      /* 인풋 박스 바깥라인 제거*/
+    }
+
+    a {
+      color: inherit;
+      /* 하이퍼 링크의 파란색 색깔을 부모색(현재 검정)으로 바꿈*/
+      text-decoration: none;
+      /* 하이퍼 링크의 밑줄 제거*/
+    }
+
+    ul,
+    li,
+    h1,
+    h2,
+    p,
+    fieldset {
+      /* 마진 패딩 기본값 제거*/
+      padding: 0;
+      margin: 0
+    }
+
+    #header {
+      width: 1020px;
+      margin: 0 auto
+    }
+
+    #header .top {
+      top: 0;
+      right: 0;
+      position: relative;
+      height: 30px;
+    }
+
+    #header .top .menu_list {
+      margin: 0 auto;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    #header .top .menu_list a {
+      /* .menu_list>li 에서 a로 바꿈*/
+      font-size: 12px;
+      /* 노가다 */
+      /*float: left;  div에서 float 설정시 display 요소가 먹히지 않아 삭제.
+      상위 속성에서 top, right로 설정해서 필요 없음*/
+      padding: 0 9px 0 8px;
+      /* 올리브영 기준 0 9 0 12지만 사이 세로줄이 
+                            border가 아니라 jpg라 12 -> 8px로 변경*/
+      line-height: 30px;
+      white-space: nowrap;
+      border-left: 1px solid #b6b6b6;
+    }
+
+    #header .top .menu_list li:first-child a {
+      /* 왼쪽 보더만 삭제 */
+      border-left: none;
+    }
+
+    fieldset {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      border: none;
+    }
+
+    .search_box {
+      /* float: left;  div에서 float 설정시 display 요소가 먹히지 않아 삭제*/
+      position: relative;
+      width: 271px;
+      height: 36px;
+      /* margin: 0px  0 90px;  줄 필요 없음*/
+      padding: 0 45px 0 20px;
+      border: 2px solid #9bce26;
+      background: rgb(255, 255, 255);
+      border-radius: 20px
+    }
+    .search_box input[type=text] {
+      width: 260px;
+      height: 18px;
+      border: 0;
+      /* padding: 8px 10px 8px 0; */
+      font-size: 12px
+    }
+    .search_box_btn {
+      position: absolute;
+      /* 절대좌표로 이동 */
+      top: 7px;
+      right: 12px;
+      border: none;
+      /* 버튼 외곽선 제거 */
+      background-color: transparent;
+      /* 버튼 기본색 투명화 */
+    }
+    .search_box_list {
+      display: none;
+    }
+    .search_box.test .search_box_list {
+      display: flex;
+      position: absolute;
+      width: 332px;
+      top: -2px;
+      left: -2px;
+      height: 360px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid #9bce26;
+      margin: 0;
+      text-indent: 3px;
+      border-radius: 20px;
+      z-index: 20px;
+    
+    }
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+
+
+
+    li {
+      text-decoration: none;
+      list-style-type: none;
+    }
+    /* display: inline; ul 스타일에 적용*/
+    ul {
+      display: flex;
+    }
+
+    .right li {
+      display: flex;
+      position: relative;
+      font-size: 14px;
+      border-left: 1px solid rgb(140, 140, 140);
+      padding: 3px 12px 3px 12px;
+      align-items: center;
+    }
+
+    .right :first-child {
+      border-left: none;
+    }
+
+    .show1,
+    .show2,
+    .show3 {
+      position: relative;
+    }
+
+
+    .show1:hover,
+    .show2:hover,
+    .show3:hover {
+      border-bottom: 2px solid black;
+    }
+
+    /* 오늘 드림 */
+    .show1_hover_show {
+      display: none;
+    }
+
+    .show1:hover .show1_hover_show {
+      position: absolute;
+      display: block;
+      width: 200px;
+      background-color: white;
+      box-shadow: 2px 0 7px 2px (rgb(0 0 0) / 20%);
+      border: 2px solid #9bce26;
+      border-radius: 5px;
+      font-size: 12px;
+      padding: 5px 10px 5px 10px;
+      top: 45px;
+      left: 0px;
+      z-index: 10;
+    }
+
+    .show1:hover .show1_hover_show::after {
+      border-top: 0px solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #9bce26;
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 40px;
+    }
+    
+    /* 관심 매장 소식 */
+    .show2_hover_show {
+      display: none;
+    }
+
+    .show2:hover .show2_hover_show {
+      position: absolute;
+      display: block;
+      width: 553px;
+      height: 150px;
+      padding-bottom: 20px;
+      background-color: white;
+      box-shadow: 2px 0 7px 2px (rgb(0 0 0) / 20%);
+      border: 2px solid #9bce26;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 5px 10px 5px 10px;
+      top: 45px;
+      right: 0px;
+      z-index: 10;
+      text-align: center;
+      box-sizing: content-box;
+      font-weight: 600;
+    }
+
+    .show2:hover .show2_hover_show::after {
+      border-top: 0px solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #9bce26;
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 40px;
+    }
+    .show2_page {
+      display: block;
+      border: none;
+      justify-content: center;
+    }
+    .show2_page ul{
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .show2_btn {
+      border: 1px solid #b6b6b6;
+      /* 버튼 외곽선 제거 */
+      background-color: transparent;
+      /* 버튼 기본색 투명화 */
+      padding: 5px 20px 5px 20px;
+
+    }
+
+    /* 최근 본 상품 */
+    .show3_list {
+      display: none;
+    }
+
+    .show3.test .show3_list{
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      width: 1020px;
+      top: 45px;
+      right: 0px;
+      height: 360px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid #9bce26;
+      margin: 0;
+      text-indent: 3px;
+      border-radius: 20px;
+      z-index: 10px;
+    }
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+    /* nav 영역 */
+    nav {
+      display: flex; /* 컨테이너로 가로정렬 */
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      width: 100vw;
+      /* header에서 1020px로 고정해놨지만 홈페이지상 위 아래로 줄이 있어
+      가로 화면 전체를 줄 긋기 위해 사용*/
+      margin-left: calc((100vw - 1020px) / 2 * -1);
+      /* width로 화면 전체에 줄을 그었지만 '카테고리'부터 줄 시작되서 
+      calc(계산)로 Viewport width에 1020px 계산 후 -1 값을 줘서 좌측으로 이동  */
+    }
+
+    nav>div {
+      display: flex;
+      width: 1020px;
+      margin: 0 auto;
+      /* 값이 2개만 있을 경우 첫번째는 상하 두번째는 좌우 값으로 적용*/
+    }
+
+    .category {
+      position: relative;
+      width: 170px;
+      font-weight: 600;
+      padding: 10px;
+      border-right: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    .category_list {
+      display: none;
+    }
+
+    .category_list>li h2 {
+      float: left;
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 17px;
+      border-bottom: 1px solid #666;
+      color: black;
+    }
+
+    .category_list>li {
+      font-size: 12px;
+      display: list-item;
+      width: 254px;
+      padding: 30px 0 0 30px;
+    }
+
+    .category_list>li:first-child {
+      width: 508px;
+      border-left: none;
+    }
+
+    .category_name {
+      display: flex;
+      font-size: 16px;
+      padding: 10px 10px 22px 12px;
+      border-bottom: 1px solid #666;
+      
+    }
+
+    .category_box {
+      float: left;
+      width: 155px;
+      border-left: ;
+    }
+
+    .category_box>p {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .category_box ul {
+      display: flex;
+      /* align-content: flex-start; */
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+      /* overflow: auto; */
+      /* white-space: nowrap; */
+      line-height: 22px;
+      margin: 10px 6px 10px 0px;
+      color: #666;
+    }
+
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+    .category.test .category_list {
+      display: flex;
+      position: absolute;
+      top: 44px;
+      left: -1px;
+      width: 1020px;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      margin: 0;
+      text-indent: 3px;
+    }
+
+    .category2 {
+      width: 100%;
+      font-weight: 600;
+      align-content: center;
+      font-size: 16px;
+    }
+
+    .category2 ul {
+      height: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .category2 li:hover {
+      color: rgb(255, 78, 108);
+      border-bottom: 2px solid rgb(254, 78, 108);
+    }
+ 
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="top">
+      <ul class="menu_list">
+        <li><a href="">회원 가입</a></li>
+        <li><a href="">로그인</a></li>
+        <li><a href="">장바구니</a></li>
+        <li><a href="">주문배송</a></li>
+        <li><a href="">고객센터</a></li>
+        <li><a href="">매장안내</a></li>
+        <li><a href="">Global</a></li>
+      </ul>
+    </div>
+    <div>
+      <fieldset>
+        <!-- fieldset 잘 안쓴다함 -->
+        <div>
+          <a href="">
+            <img src="oliveyoung.png" alt="올리브영" width="248px" height="42">
+          </a>
+        </div>
+        <div class="search_box">
+          <input type="text" class="search_box_list">
+          <button type="submit" class="search_box_btn">
+            <img src="searchbutton.png">
+          </button>
+        </div>
+        <div class="right">
+          <ul>
+            <li class="show1">
+              <a href="">오늘 드림
+                <img src="bag.png" width="22" height="20">
+              </a>
+              <div class="show1_hover_show">
+                배송지를 등록하고 오늘드림으로<br />
+                구매 가능한 상품을 확인하세요!
+              </div>
+            </li>
+            <li class="show2">
+              <a href="">관심 매장소식</a>
+              <div class="show2_hover_show">
+                <div class="show2_page">
+                  <ul>
+                    <li> 로그인하시면 자주가는 매장을<br />
+                      관심 매장으로 설정 할 수 있습니다.
+                    </li>
+                    <li><button class="show2_btn">로그인</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="show3">
+              <a>최근 본 상품</a>
+              <div class="show3_list"><ul>
+                <li>전체</li>
+                <li>최근 본 상품</li>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </fieldset>
+    </div>
+    <nav>
+      <div>
+        <div class="category">
+          <p><img src="category.png"> 카테고리</p>
+          <ul class="category_list">
+            <li>
+              <h2>뷰티</h2>
+              <div class="category_box">
+                <p><a href="">스킨케어 ></a></p>
+                <ul>
+                  <li><a href="">스킨/로션/올인원</a></li>
+                  <li><a href="">에센스/크림</a></li>
+                  <li><a href="">미스트/오일</a></li>
+                </ul>
+                <p><a href="">마스크팩 ></a></p>
+                <ul>
+                  <li><a href="">시트팩/패드</a></li>
+                  <li><a href="">페이셜팩</a></li>
+                  <li><a href="">코팩/패치</a></li>
+                </ul>
+                <p><a href="">클렌징폼/젤 ></p>
+                <ul>
+                  <li><a href="">스킨/로션/올인원</a></li>
+                  <li><a href="">오일/워터/리무버</a></li>
+                  <li><a href="">필링/패드</a></li>
+                </ul>
+                <p><a href="">선케어 ></a></p>
+                <ul>
+                  <li><a href="">선블록</a></li>
+                  <li><a href="">태닝/에프터선</a></li>
+                </ul>
+              </div>
+              <div class="category_box">
+                <p><a href="">더모코스메틱 ></a></p>
+                <ul>
+                  <li><a href="">스킨/로션</a></li>
+                  <li><a href="">에센스/크림</a></li>
+                  <li><a href="">미스트/오일</a></li>
+                  <li><a href="">마스크팩</a></li>
+                  <li><a href="">클렌징</a></li>
+                  <li><a href="">선케어</a></li>
+                  <li><a href="">바디케어</a></li>
+                </ul>
+                <p><a href="">메이크업 ></a></p>
+                <ul>
+                  <li><a href="">립메이크업</a></li>
+                  <li><a href="">베이스메이크업</a></li>
+                  <li><a href="">아이메이크업</a></li>
+                </ul>
+                <p><a href="">네일 ></a></p>
+                <ul>
+                  <li><a href="">폴리쉬</a></li>
+                  <li><a href="">팁/스티커</a></li>
+                  <li><a href="">반경화</a></li>
+                  <li><a href="">케어</a></li>
+                </ul>
+                <p><a href="">바디케어 ></a></p>
+                <ul>
+                  <li><a href="">워시/스크럽</a></li>
+                  <li><a href="">로션/오일</a></li>
+                  <li><a href="">제모용품</a></li>
+                  <li><a href="">핸드케어</a></li>
+                  <li><a href="">립케어</a></li>
+                  <li><a href="">바디미스트</a></li>
+                  <li><a href="">데오도란트</a></li>
+                  <li><a href="">풋케어</a></li>
+                  <li><a href="">선물세트</a></li>
+                </ul>
+              </div>
+              <div class="category_box">
+                <p><a href="">헤어케어 ></a></p>
+                <ul>
+                  <li><a href="">샴푸/린스</a></li>
+                  <li><a href="">트리트먼트/팩</a></li>
+                  <li><a href="">헤어기기</a></li>
+                  <li><a href="">헤어브러쉬</a></li>
+                  <li><a href="">염색약/펌</a></li>
+                  <li><a href="">스타일링</a></li>
+                  <li><a href="">탈모케어</a></li>
+                  <li><a href="">에센스</a></li>
+                </ul>
+                <p><a href="">향수/디퓨저 ></a></p>
+                <ul>
+                  <li><a href="">여성향수</a></li>
+                  <li><a href="">남성향수</a></li>
+                  <li><a href="">캔들/디퓨저</a></li>
+                </ul>
+                <p><a href="">미용소품 ></a></p>
+                <ul>
+                  <li><a href="">페이스</a></li>
+                  <li><a href="">아이</a></li>
+                  <li><a href="">헤어/바디</a></li>
+                  <li><a href="">코튼</a></li>
+                  <li><a href="">디바이스</a></li>
+                  <li><a href="">네일</a></li>
+                  <li><a href="">기타소품</a></li>
+                </ul>
+                <p><a href="">남성 ></a></p>
+                <ul>
+                  <li><a href="">스킨케어</a></li>
+                  <li><a href="">바디케어</a></li>
+                  <li><a href="">헤어케어</a></li>
+                  <li><a href="">메수크업</a></li>
+                  <li><a href="">쉐수빙</a></li>
+                  <li><a href="">향수</a></li>
+                  <li><a href="">매너용품</a></li>
+                  <li><a href="">건강식품</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h2>헬스&푸드</h2>
+              <div class="category_box">
+                <p><a href="">건강&위생식품 ></a></p>
+                <ul>
+                  <li><a href="">덴탈케어</a></li>
+                  <li><a href="">스팟패치/마스크</a></li>
+                  <li><a href="">여성/위생용품</a></li>
+                  <li><a href="">아이케어</a></li>
+                  <li><a href="">운동/헬스/재활용품</a></li>
+                  <li><a href="">물티슈/손소독티슈</a></li>
+                  <li><a href="">마사지/찜질용품</a></li>
+                  <li><a href="">성인용품</a></li>
+                  <li><a href=""> 홈케어/의료용품</a></li>
+                </ul>
+                <p><a href="">건강식품 ></a></p>
+                <ul>
+                  <li><a href="">비타민류</a></li>
+                  <li><a href="">장 건강</a></li>
+                  <li><a href="">체중 관리</a></li>
+                  <li><a href="">이너뷰티 케어</a></li>
+                  <li><a href="">여성 건강</a></li>
+                  <li><a href="">혈행/눈/간 건강</a></li>
+                  <li><a href="">홍삼/면역케어</a></li>
+                  <li><a href="">관절/뼈/치아 건강</a></li>
+                  <li><a href="">기타(스페셜케어)</a></li>
+                  <li><a href="">선물용 건강세트</a></li>
+                </ul>
+                <p><a href="">푸드 ></a></p>
+                <ul>
+                  <li><a href="">식단/이너뷰티</a></li>
+                  <li><a href="">간편식/요리</a></li>
+                  <li><a href="">디저트/간식</a></li>
+                  <li><a href="">생수/음료</a></li>
+                  <li><a href="">베이비푸트</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h2>라이프</h2>
+              <div class="category_box">
+                <p><a href="">라이프/홈 ></a></p>
+                <ul>
+                  <li><a href="">공간방향/제습</a></li>
+                  <li><a href="">홈클리닝</a></li>
+                  <li><a href="">생활</a></li>
+                  <li><a href="">주방</a></li>
+                  <li><a href="">라이프웨어</a></li>
+                  <li><a href="">테크</a></li>
+                  <li><a href="">홈데코</a></li>
+                  <li><a href="">악세서리</a></li>
+                  <li><a href="">굿즈</a></li>
+                </ul>
+                <p><a href="">반려동물 ></a></p>
+                <ul>
+                  <li><a href="">강아지 식품</a></li>
+                  <li><a href="">강아지 용품</a></li>
+                  <li><a href="">고양이 식품</a></li>
+                  <li><a href="">고양이 용품</a></li>
+                </ul>
+                <p><a href="">베이비 ></a></p>
+                <ul>
+                  <li><a href="">기저귀</a></li>
+                  <li><a href="">분유/이유식/간식</a></li>
+                  <li><a href="">스킨/바디케어</a></li>
+                  <li><a href="">유아용품</a></li>
+                  <li><a href="">베이비 물티슈</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="category2">
+          <ul>
+            <li><a href="">오특</a></li>
+            <li><a href="">신상</a></li>
+            <li><a href="">랭킹</a></li>
+            <li><a href="">프리미엄관</a></li>
+            <li><a href="">기획전</a></li>
+            <li><a href="">세일</a></li>
+            <li><a href="">기프트카드</a></li>
+            <li><a href="">멤버십/쿠폰</a></li>
+            <li><a href="">이벤트</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  </nav>
+
+</body>
+
+<script>
+  const category = document.querySelector(".category");
+
+  category.addEventListener("click", () => {
+    if (category.classList.contains("test")) {
+      category.classList.remove("test");
+    } else {
+      category.classList.add("test");
+    }
+  })
+
+  const search_box = document.querySelector(".search_box");
+  search_box.addEventListener("click", () => {
+    if (search_box.classList.contains("test")) {
+      search_box.classList.remove("test");
+    } else {
+      search_box.classList.add("test");
+    }
+  })
+
+  const show3 = document.querySelector(".show3");
+  show3.addEventListener("click", () => {
+    if (show3.classList.contains("test")) {
+      show3.classList.remove("test");
+    } else {
+      show3.classList.add("test");
+    }
+  })
+  
+</script>
+
+>>>>>>> ec83aaf922fab32d42c6d497e398d63880dbfe9e
 </html>
