@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,12 +69,12 @@
     fieldset {
       /* 마진 패딩 기본값 제거*/
       padding: 0;
-      margin: 0
+      margin: 0;
     }
 
     #header {
       width: 1020px;
-      margin: 0 auto
+      margin: 0 auto;
     }
 
     #header .top {
@@ -99,7 +100,7 @@
       상위 속성에서 top, right로 설정해서 필요 없음*/
       padding: 0 9px 0 8px;
       /* 올리브영 기준 0 9 0 12지만 사이 세로줄이 
-                            border가 아니라 jpg라 12 -> 8px로 변경*/
+      border가 아니라 이미지 파일이여서 12 -> 8px로 변경*/
       line-height: 30px;
       white-space: nowrap;
       border-left: 1px solid #b6b6b6;
@@ -123,12 +124,14 @@
       position: relative;
       width: 271px;
       height: 36px;
+      left: 35px;
       /* margin: 0px  0 90px;  줄 필요 없음*/
       padding: 0 45px 0 20px;
       border: 2px solid #9bce26;
       background: rgb(255, 255, 255);
       border-radius: 20px
     }
+
     .search_box input[type=text] {
       width: 260px;
       height: 18px;
@@ -136,6 +139,7 @@
       /* padding: 8px 10px 8px 0; */
       font-size: 12px
     }
+
     .search_box_btn {
       position: absolute;
       /* 절대좌표로 이동 */
@@ -146,9 +150,11 @@
       background-color: transparent;
       /* 버튼 기본색 투명화 */
     }
+
     .search_box_list {
       display: none;
     }
+
     .search_box.test .search_box_list {
       display: flex;
       position: absolute;
@@ -162,12 +168,12 @@
       text-indent: 3px;
       border-radius: 20px;
       z-index: 20px;
-    
+
     }
 
 
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
 
 
@@ -177,6 +183,7 @@
       text-decoration: none;
       list-style-type: none;
     }
+
     /* display: inline; ul 스타일에 적용*/
     ul {
       display: flex;
@@ -191,10 +198,10 @@
       align-items: center;
     }
 
-    .right :first-child {
+    .show1:first-child {
       border-left: none;
     }
-
+    
     .show1,
     .show2,
     .show3 {
@@ -238,8 +245,9 @@
       top: -10px;
       left: 40px;
     }
-    
+
     /* 관심 매장 소식 */
+    
     .show2_hover_show {
       display: none;
     }
@@ -274,14 +282,11 @@
       top: -10px;
       right: 40px;
     }
+
     .show2_page {
       display: block;
       border: none;
       justify-content: center;
-    }
-    .show2_page ul{
-      justify-content: center;
-      flex-direction: column;
     }
 
     .show2_btn {
@@ -292,31 +297,70 @@
       padding: 5px 20px 5px 20px;
 
     }
-
+    .show2_1 {
+      padding: 15px 0 30px 0;
+      border-bottom: 1px solid rgb(215, 215, 215);
+    }
+    .show2_2 {
+      padding: 10px 0 15px 0;
+    }
     /* 최근 본 상품 */
     .show3_list {
       display: none;
+      flex-direction: column;
     }
 
-    .show3.test .show3_list{
+    .show3.test .show3_list {
       display: flex;
       position: absolute;
-      flex-direction: column;
       width: 1020px;
       top: 45px;
-      right: 0px;
+      right: -4px;
       height: 360px;
       background-color: rgb(255, 255, 255);
       border: 2px solid #9bce26;
       margin: 0;
       text-indent: 3px;
-      border-radius: 20px;
       z-index: 10px;
     }
+    .show3_1 {
+      display: flex;
+      justify-items: center;
+      margin: auto 20px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #ddd;
+      border-bottom: 2px solid #666;
+    }
+    .show3_2 {
+      display: grid;
+      position: relative;
+      justify-items: center;
+      align-items: center;
+      height: 280px;
+      width: 980px;
+      margin: auto 20px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #ddd;
+    }
+
+    .show3.test .show3_list::after {
+      border-top: 0px solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #9bce26;
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 40px;
+    }
+
     /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
     /* nav 영역 */
     nav {
-      display: flex; /* 컨테이너로 가로정렬 */
+      display: flex;
+      /* 컨테이너로 가로정렬 */
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
       width: 100vw;
@@ -325,6 +369,7 @@
       margin-left: calc((100vw - 1020px) / 2 * -1);
       /* width로 화면 전체에 줄을 그었지만 '카테고리'부터 줄 시작되서 
       calc(계산)로 Viewport width에 1020px 계산 후 -1 값을 줘서 좌측으로 이동  */
+      border-bottom: 2px solid black;
     }
 
     nav>div {
@@ -337,15 +382,17 @@
     .category {
       position: relative;
       width: 170px;
-      font-weight: 600;
+      font-weight: 500;
       padding: 10px;
       border-right: 1px solid #ddd;
       border-left: 1px solid #ddd;
       font-size: 16px;
+      text-align: center;
     }
 
     .category_list {
       display: none;
+      text-align: left;
     }
 
     .category_list>li h2 {
@@ -358,7 +405,7 @@
     }
 
     .category_list>li {
-      font-size: 12px;
+      font-size: 14px;
       display: list-item;
       width: 254px;
       padding: 30px 0 0 30px;
@@ -374,7 +421,7 @@
       font-size: 16px;
       padding: 10px 10px 22px 12px;
       border-bottom: 1px solid #666;
-      
+
     }
 
     .category_box {
@@ -414,8 +461,7 @@
 
     .category2 {
       width: 100%;
-      font-weight: 600;
-      align-content: center;
+      font-weight: 500;
       font-size: 16px;
     }
 
@@ -426,13 +472,14 @@
       align-items: center;
       justify-content: space-evenly;
     }
+
     .category2 li:hover {
       color: rgb(255, 78, 108);
       border-bottom: 2px solid rgb(254, 78, 108);
     }
- 
   </style>
 </head>
+
 <body>
   <div id="header">
     <div class="top">
@@ -475,28 +522,30 @@
               <a href="">관심 매장소식</a>
               <div class="show2_hover_show">
                 <div class="show2_page">
-                  <ul>
-                    <li> 로그인하시면 자주가는 매장을<br />
-                      관심 매장으로 설정 할 수 있습니다.
-                    </li>
-                    <li><button class="show2_btn">로그인</button>
-                    </li>
-                  </ul>
+                  <div class="show2_1">
+                    로그인 하시면 자주가는 매장을<br />
+                    관심 매장으로 설정 할 수 있습니다.
+                    
+                  </div>
+                  <div class="show2_2">
+                      <button class="show2_btn">로그인</button>
+                  </div>
                 </div>
               </div>
             </li>
             <li class="show3">
               <a>최근 본 상품</a>
               <div class="show3_list">
-                <ul>
-                  <li>전체</li>
-                  <li>최근 본 상품</li>
-                </ul>
+                  <div class="show3_1">
+                    전체
+                  </div>
+                  <div class="show3_2">
+                    최근 본 상품이 없습니다.
+                  </div>
               </div>
             </li>
           </ul>
         </div>
-
       </fieldset>
     </div>
     <nav>
@@ -697,7 +746,6 @@
       </div>
   </div>
   </nav>
-
 </body>
 
 <script>
@@ -728,7 +776,7 @@
       show3.classList.add("test");
     }
   })
-  
+
 </script>
 
 </html>
