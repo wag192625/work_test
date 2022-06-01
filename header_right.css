@@ -42,7 +42,7 @@
   padding: 5px 10px 5px 10px;
   top: 45px;
   left: 0px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .show1:hover .show1_hover_show::after {
@@ -76,7 +76,7 @@
   padding: 5px 10px 5px 10px;
   top: 45px;
   right: 0px;
-  z-index: 10;
+  z-index: 1;
   text-align: center;
   box-sizing: content-box;
   font-weight: 600;
@@ -131,7 +131,7 @@
   border: 2px solid #9bce26;
   margin: 0;
   text-indent: 3px;
-  z-index: 10px;
+  z-index: 1;
 }
 .show3_1 {
   display: flex;
