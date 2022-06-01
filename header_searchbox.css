@@ -54,5 +54,6 @@
 .sbt {
   display: flex;
   position: absolute;
-  wi
+  width: 168px;
+  
 }
