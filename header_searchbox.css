@@ -38,7 +38,7 @@
 .search_box.test .search_box_list {
   display: flex;
   position: absolute;
-  width: 332px;
+  width: 336px;
   top: -2px;
   left: -2px;
   height: 360px;
@@ -49,4 +49,10 @@
   border-radius: 20px;
   z-index: 1;
 
+}
+
+.sbt {
+  display: flex;
+  position: absolute;
+  wi
 }
