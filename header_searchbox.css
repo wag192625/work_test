@@ -11,15 +11,38 @@
   background: rgb(255, 255, 255);
   border-radius: 20px
 }
-
 .search_box input[type=text] {
   width: 260px;
   height: 18px;
   border: 0;
   /* padding: 8px 10px 8px 0; */
-  font-size: 12px
+  font-size: 16px
 }
+.search_box.test .search_box_list {
+  display: grid;
+  grid-template-columns: 0px 340px;
+  position: absolute;
+  width: 336px;
+  top: -2px;
+  left: -2px;
+  height: 360px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #9bce26;
+  margin: 0;
+  text-indent: 3px;
+  border-radius: 20px;
+  z-index: 1;
 
+}
+.search_box_input {
+  display: grid;
+  position: relative;
+  width: 260px;
+  height: 18px;
+  border: 0;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+}
 .search_box_btn {
   position: absolute;
   /* 절대좌표로 이동 */
@@ -35,24 +58,8 @@
   display: none;
 }
 
-.search_box.test .search_box_list {
-  display: flex;
-  position: absolute;
-  width: 336px;
-  top: -2px;
-  left: -2px;
-  height: 360px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #9bce26;
-  margin: 0;
-  text-indent: 3px;
-  border-radius: 20px;
-  z-index: 1;
-
-}
-
 .search_box_tap {
-  display: flex;
+  display: grid;
   position: relative;
   justify-items: center;
   align-items: center;

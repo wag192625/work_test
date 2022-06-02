@@ -139,7 +139,7 @@
   margin: auto 20px;
   font-size: 14px;
   font-weight: 500;
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
   border-bottom: 2px solid #666;
 }
 .show3_2 {
@@ -152,7 +152,7 @@
   margin: auto 20px;
   font-size: 14px;
   font-weight: 500;
-  background-color: #ddd;
+  background-color: rgb(255, 255, 255);
 }
 
 .show3.test .show3_list::after {
