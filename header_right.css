@@ -40,7 +40,7 @@
   border-radius: 5px;
   font-size: 12px;
   padding: 5px 10px 5px 10px;
-  top: 45px;
+  top: 44px;
   left: 0px;
   z-index: 1;
 }
@@ -89,7 +89,7 @@
   border-bottom: 10px solid #9bce26;
   content: "";
   position: absolute;
-  top: -10px;
+  top: -11px;
   right: 40px;
 }
 
@@ -162,6 +162,6 @@
   border-bottom: 10px solid #9bce26;
   content: "";
   position: absolute;
-  top: -10px;
+  top: -11px;
   right: 40px;
 }
