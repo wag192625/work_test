@@ -92,7 +92,6 @@ ul {
 #header .top .menu_list a {
   /* .menu_list>li 에서 a로 바꿈*/
   font-size: 12px;
-  /* 노가다 */
   /*float: left;  div에서 float 설정시 display 요소가 먹히지 않아 삭제.
   상위 속성에서 top, right로 설정해서 필요 없음*/
   padding: 0 9px 0 8px;
