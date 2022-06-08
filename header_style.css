@@ -103,7 +103,7 @@ ul {
 }
 
 #header .top .menu_list li:first-child a {
-  /* 왼쪽 보더만 삭제 */
+  /* 왼쪽 보더만 삭제1 */
   border-left: none;
 }
 
